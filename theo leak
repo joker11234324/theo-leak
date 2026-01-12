@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Scan</title>
+  <style>
+    body {
+      background: black;
+      color: #00ff00;
+      font-family: monospace;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>⚠ SYSTEM SCAN IN PROGRESS ⚠</h1>
+  <p id="status" class="blink">Scanning files...</p>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("status").innerText =
+        "❌ VIRUS DETECTED: TROJAN.EXE";
+    }, 3000);
+
+    setTimeout(() => {
+      document.body.innerHTML =
+        "<h1>😄 PRANK!</h1><p>No virus. Nothing happened.</p>";
+    }, 6000);
+  </script>
+</body>
+</html>
